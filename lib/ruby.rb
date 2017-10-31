@@ -2,14 +2,6 @@
 # use (addition, subtraction, multiplication, division) and then asks the user for two numbers,
 # returning the result of the method with the two numbers. Here is a sample prompt:
 
-# What calculation would you like to do? (add, sub, mult, div)
-# add
-# What is number 1?
-# 3
-# What is number 2?
-# 6
-# Your result is 9
-
 # def choose_method(method)
 #   puts "choose method: #{method}"
 #   if method == "add"
@@ -62,44 +54,31 @@
 ##########################################################################################
 # Reverse a string in place. In other words, do not create a new string or use other methods on the string such as reverse.
 # The goal of the problem is to use a loop and the string accessors to figure out which values to swap for other values.
-# Below is some sample output.
+
+# def reverse(string)
+#   puts "reverse method: #{string}"
+#   # i = 0
+#   # num = string.length
+#   split = []
+#   split = string.split('')
+#   puts split
+#   while split.length >= 1 do
+#     final = split.pop
+#     puts "final: #{final}"
+#   end
+#   puts "final: #{final}"
 #
-# Enter a string:
-# reverse_me
-# em_esrever
-
-def reverse(string)
-  puts "reverse method: #{string}"
-  # i = 0
-  # num = string.length
-  split = []
-  split = string.split('')
-  puts split
-  while split.length >= 1 do
-    final = split.pop
-    puts "final: #{final}"
-  end
-  puts "final: #{final}"
-
-end
-
-def get_string
-  puts "please type a word"
-  response = gets.downcase
-  string = response.chomp
-  puts "you chose #{string}. Thank you"
-  reverse(string)
-end
-
-puts get_string
-
-
-
-
-
-
-
-
+# end
+#
+# def get_string
+#   puts "please type a word"
+#   response = gets.downcase
+#   string = response.chomp
+#   puts "you chose #{string}. Thank you"
+#   reverse(string)
+# end
+#
+# puts get_string
 
 
 ##########################################################################################
@@ -117,6 +96,42 @@ puts get_string
 # Are you done?
 # yes
 # Thank you!
+
+
+balance = 1000
+
+def balance_change(answer)
+  balance = 1000
+  puts "desposit or withdraw: #{answer}"
+  if answer == "deposit"
+    puts "how much?"
+    x = gets.to_i
+    account = balance + x
+    puts "your balance is: #{account}"
+  else answer == "withdraw"
+    puts "how much?"
+    x = gets.to_i
+    account = balance - x
+    puts "your balance is: #{account}"
+  end
+end
+
+def calc
+  balance = 1000
+  see_bal = false
+  puts "would you like to display your balance?"
+  resp = gets.chomp
+  if resp == "yes"
+    see_bal = true
+    puts "your balance is: #{balance}"
+  else
+    puts "if you would like to desposit or withdraw, please type either. Otherwise get the fuck out!"
+    answer = gets.chomp
+    balance_change(answer)
+  end
+end
+
+puts calc
 
 
 
