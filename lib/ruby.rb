@@ -69,7 +69,18 @@
 # em_esrever
 
 def reverse(string)
-  puts "reverse method"
+  puts "reverse method: #{string}"
+  # i = 0
+  # num = string.length
+  split = []
+  split = string.split('')
+  puts split
+  while split.length >= 1 do
+    final = split.pop
+    puts "final: #{final}"
+  end
+  puts "final: #{final}"
+
 end
 
 def get_string
@@ -80,7 +91,7 @@ def get_string
   reverse(string)
 end
 
-
+puts get_string
 
 
 
