@@ -98,42 +98,40 @@
 # Thank you!
 
 
-balance = 1000
-
-def balance_change(answer)
-  balance = 1000
-  puts "desposit or withdraw: #{answer}"
-  if answer == "deposit"
-    puts "how much?"
-    x = gets.to_i
-    account = balance + x
-    puts "your balance is: #{account}"
-  else answer == "withdraw"
-    puts "how much?"
-    x = gets.to_i
-    account = balance - x
-    puts "your balance is: #{account}"
-  end
-end
-
-def calc
-  balance = 1000
-  see_bal = false
-  puts "would you like to display your balance?"
-  resp = gets.chomp
-  if resp == "yes"
-    see_bal = true
-    puts "your balance is: #{balance}"
-  else
-    puts "if you would like to desposit or withdraw, please type either. Otherwise get the fuck out!"
-    answer = gets.chomp
-    balance_change(answer)
-  end
-end
-
-puts calc
-
-
+# balance = 1000
+#
+# def balance_change(answer)
+#   balance = 1000
+#   puts "desposit or withdraw: #{answer}"
+#   if answer == "deposit"
+#     puts "how much?"
+#     x = gets.to_i
+#     account = balance + x
+#     puts "your balance is: #{account}"
+#   else answer == "withdraw"
+#     puts "how much?"
+#     x = gets.to_i
+#     account = balance - x
+#     puts "your balance is: #{account}"
+#   end
+# end
+#
+# def calc
+#   balance = 1000
+#   see_bal = false
+#   puts "would you like to display your balance?"
+#   resp = gets.chomp
+#   if resp == "yes"
+#     see_bal = true
+#     puts "your balance is: #{balance}"
+#   else
+#     puts "if you would like to desposit or withdraw, please type either. Otherwise get the fuck out!"
+#     answer = gets.chomp
+#     balance_change(answer)
+#   end
+# end
+#
+# puts calc
 
 
 ##########################################################################################
@@ -158,3 +156,21 @@ puts calc
 # The number is higher than 18.  Guess again
 # 19
 # You got it in 7 tries
+
+
+def first_guess
+  number = 27
+  puts "please guess a number between 1 and 100"
+  ans = gets.to_i
+  if ans == number
+    puts "great guess, you got it. 27!"
+  elsif ans < number
+    puts "sorry #{ans} is less than the number"
+    first_guess
+  else ans > number
+    puts "you guessed too high, ya jerk"
+    first_guess
+  end
+end
+
+puts first_guess
