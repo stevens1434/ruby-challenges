@@ -10,71 +10,51 @@
 # 6
 # Your result is 9
 
-# def get_int_values
-#   [gets, gets].map{ |s| s.chomp.to_i }
+# def choose_method(method)
+#   puts "choose method: #{method}"
+#   if method == "add"
+#     puts "add this"
+#     puts "what is your first number?"
+#     x = gets.to_i
+#     puts "what is your second number?"
+#     y = gets.to_i
+#     add = x + y
+#     puts "#{x} + #{y} = #{add}"
+#   elsif method == "subt"
+#     puts "subtract"
+#     puts "what is your first number?"
+#     x = gets.to_i
+#     puts "what is your second number?"
+#     y = gets.to_i
+#     subt = x + y
+#     puts "#{x} - #{y} = #{subt}"
+#   elsif method == "mult"
+#     puts "mutliply"
+#     puts "what is your first number?"
+#     x = gets.to_i
+#     puts "what is your second number?"
+#     y = gets.to_i
+#     mult = x * y
+#     puts "#{x} * #{y} = #{mult}"
+#   elsif method == "div"
+#     puts "divide this"
+#     puts "what is your first number?"
+#     x = gets.to_i
+#     puts "what is your second number?"
+#     y = gets.to_i
+#     div = x / y
+#     puts "#{x} / #{y} = #{div}"
+#   end
 # end
-# puts "Would you like to [add], [multiply], or [subtract]?"
-# response = gets.chomp
-# case response.downcase
-# when 'add'
-#   puts "Which numbers would you like to add?"
-#   operator = :+
-# when 'subtract'
-#   puts "Which numbers would you like to subtract?"
-#   operator = :-
-# when 'multiply'
-#   puts "Which numbers would you like to multiply?"
-#   operator = :*
+#
+# def calc
+#   puts "Which method would you like to use?"
+#   method = gets.chomp
+#   puts "calc 2: #{method}"
+#   choose_method(method)
 # end
-# answer = get_int_values.inject(operator)
-# puts "The answer is... #{ answer }"
-
-
-def choose_method(method)
-  puts "choose method: #{method}"
-  if method == "add"
-    puts "add this"
-    puts "what is your first number?"
-    x = gets.to_i
-    puts "what is your second number?"
-    y = gets.to_i
-    add = x + y
-    puts "#{x} + #{y} = #{add}"
-  elsif method == "subt"
-    puts "subtract"
-    puts "what is your first number?"
-    x = gets.to_i
-    puts "what is your second number?"
-    y = gets.to_i
-    subt = x + y
-    puts "#{x} - #{y} = #{subt}"
-  elsif method == "mult"
-    puts "mutliply"
-    puts "what is your first number?"
-    x = gets.to_i
-    puts "what is your second number?"
-    y = gets.to_i
-    mult = x * y
-    puts "#{x} * #{y} = #{mult}"
-  elsif method == "div"
-    puts "divide this"
-    puts "what is your first number?"
-    x = gets.to_i
-    puts "what is your second number?"
-    y = gets.to_i
-    div = x / y
-    puts "#{x} / #{y} = #{div}"
-  end
-end
-
-def calc
-  puts "Which method would you like to use?"
-  method = gets.chomp
-  puts "calc 2: #{method}"
-  choose_method(method)
-end
-
-puts calc
+#
+# puts calc
 
 
 
@@ -88,6 +68,17 @@ puts calc
 # reverse_me
 # em_esrever
 
+def reverse(string)
+  puts "reverse method"
+end
+
+def get_string
+  puts "please type a word"
+  response = gets.downcase
+  string = response.chomp
+  puts "you chose #{string}. Thank you"
+  reverse(string)
+end
 
 
 
